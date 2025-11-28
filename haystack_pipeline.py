@@ -61,7 +61,7 @@ class Pipeline:
             model=self.valves.EMBEDDING_MODEL_NAME,
             url = self.valves.OLLAMA_BASE_URL
         )
-        doc_embedder.warm_up()
+        # doc_embedder.warm_up()
 
         docs_with_embeddings = doc_embedder.run(docs)
         document_store.write_documents(docs_with_embeddings["documents"])
