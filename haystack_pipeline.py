@@ -40,7 +40,7 @@ class Pipeline:
         from haystack.components.embedders import SentenceTransformersDocumentEmbedder
         from haystack.components.embedders import SentenceTransformersTextEmbedder
         from haystack_integrations.components.embedders.ollama import OllamaTextEmbedder
-        from haystack_integrations.components.embedders.ollama import OllamaTextEmbedded
+        from haystack_integrations.components.embedders.ollama import OllamaDocumentEmbedder
         from haystack.components.retrievers.in_memory import InMemoryEmbeddingRetriever
         from haystack.components.builders import PromptBuilder
         # from haystack.components.generators import OpenAIGenerator
