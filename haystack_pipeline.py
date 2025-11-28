@@ -13,7 +13,7 @@ from schemas import OpenAIChatMessage
 import os
 import asyncio
 
-from pydantinc import BaseModel
+from pydantic import BaseModel
 
 class Pipeline: 
     class Valves(BaseModel):
