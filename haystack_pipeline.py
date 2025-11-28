@@ -44,7 +44,7 @@ class Pipeline:
         from haystack.components.retrievers.in_memory import InMemoryEmbeddingRetriever
         from haystack.components.builders import PromptBuilder
         # from haystack.components.generators import OpenAIGenerator
-        from haystack.components.generators import OpenAIGenerator
+        from haystack_integrations.components.generators.ollama import OllamaGenerator
 
         from haystack.document_stores.in_memory import InMemoryDocumentStore
 
