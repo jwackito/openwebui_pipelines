@@ -15,8 +15,7 @@ import asyncio
 
 from pydantinc import BaseModel
 
-class Pipeline:
-    
+class Pipeline: 
     class Valves(BaseModel):
         OLLAMA_BASE_URL: str
         MODEL_NAME: str
@@ -90,7 +89,7 @@ class Pipeline:
 
         # generator = OpenAIGenerator(model="gpt-3.5-turbo")
         generator = OllamaGenerator(model=self.valves.MODEL_NAME,
-                                    url = self.valves.OLLAMA_BASE_URL
+                                    url = self.valves.OLLAMA_BASE_URL,
                                     generation_kwargs={
                                         "num_predict": 100,
                                         "temperature": 0.5,
