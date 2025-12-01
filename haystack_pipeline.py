@@ -133,4 +133,4 @@ class Pipeline:
             }
         )
 
-        return response["llm"]["replies"][0]
+        return response.response_gen
