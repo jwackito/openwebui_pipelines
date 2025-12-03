@@ -83,6 +83,10 @@ class Pipeline:
 
         Question: {{question}}
         Answer:
+
+        If the context do not cover the topic of the question, repond "I don't know anything about that. Hail the Machine!"
+        Include the metadata to the document retrieved.
+        Finish all your Answers with "Hail the Machine!"
         """
 
         prompt_builder = PromptBuilder(template=template)
@@ -91,7 +95,7 @@ class Pipeline:
         generator = OllamaGenerator(model=self.valves.MODEL_NAME,
                                     url = self.valves.OLLAMA_BASE_URL,
                                     generation_kwargs={
-                                        "num_predict": 100,
+                                        "num_predict": 10000,
                                         "temperature": 0.5,
                                         }
                                     )
@@ -133,4 +137,4 @@ class Pipeline:
             }
         )
 
-        return response["llm"]["replies"][0].text
+        return response["llm"]["replies"][0]
