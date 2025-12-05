@@ -2,7 +2,7 @@
 title: GCoop Haystack Pipeline
 author: open-webui, Joaquin Bogado
 date: 2025-11-27
-version: 1.0
+version: 1.1
 license: MIT
 description: A pipeline for retrieving relevant information from a knowledge base using the Haystack library.
 requirements: ollama-haystack, haystack-ai, datasets>=2.6.1, sentence-transformers>=2.2.0
