@@ -18,7 +18,7 @@ from pydantic import BaseModel
 class Pipeline: 
     class Valves(BaseModel):
         OLLAMA_BASE_URL: str
-        MODEL_NAME: str
+        MODEL_ID: str
         EMBEDDING_MODEL_NAME: str
 
     def __init__(self):
