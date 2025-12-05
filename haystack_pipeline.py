@@ -29,7 +29,7 @@ class Pipeline:
         self.valves = self.Valves(
             **{
                 "OLLAMA_BASE_URL": os.getenv("OLLAMA_BASE_URL", "http://host.docker.internal:11434"),
-                "MODEL_NAME": os.getenv("MODEL_NAME", "gpt-oss:20b"),
+                "MODEL_ID": os.getenv("MODEL_ID", "gpt-oss:20b"),
                 "EMBEDDING_MODEL_NAME": os.getenv("EMBEDDING_MODEL_NAME", "bge-m3:567m"),
             }
         )
@@ -92,7 +92,7 @@ class Pipeline:
         prompt_builder = PromptBuilder(template=template)
 
         # generator = OpenAIGenerator(model="gpt-3.5-turbo")
-        generator = OllamaGenerator(model=self.valves.MODEL_NAME,
+        generator = OllamaGenerator(model=self.valves.MODEL_ID,
                                     url = self.valves.OLLAMA_BASE_URL,
                                     generation_kwargs={
                                         "num_predict": 10000,
