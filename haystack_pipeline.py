@@ -85,7 +85,7 @@ class Pipeline:
         Answer:
 
         If the context do not cover the topic of the question, repond "I don't know anything about that. Hail the Machine!"
-        Include the metadata to the document retrieved.
+        Include the metadata to the document retrieved. If source is an URL, provide it.
         Finish all your Answers with "Hail the Machine!"
         """
 
